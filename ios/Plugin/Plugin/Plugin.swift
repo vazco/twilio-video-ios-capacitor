@@ -6,10 +6,10 @@ import Photos
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitor.ionicframework.com/docs/plugins/ios
  */
-@objc(TwilioIosCapacitor)
-public class TwilioIosCapacitor: CAPPlugin {
+@objc(TwilioVideoIosCapacitor)
+public class TwilioVideoIosCapacitor: CAPPlugin {
     
-    @objc func joinTwilioRoom(_ call: CAPPluginCall) {
+    @objc func joinRoom(_ call: CAPPluginCall) {
         
         guard let roomName = call.options["roomName"] as? String else {
             call.reject("Must provide an roomName")
