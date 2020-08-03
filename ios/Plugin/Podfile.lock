@@ -1,25 +1,24 @@
 PODS:
-  - Capacitor (1.0.0-beta.13):
-    - CapacitorCordova (= 1.0.0-beta.13)
-  - CapacitorCordova (1.0.0-beta.13)
-  - TwilioVideo (2.6.0)
+  - Capacitor (2.1.1):
+    - CapacitorCordova (= 2.1.1)
+  - CapacitorCordova (2.1.1)
+  - TwilioVideo (3.6.0)
 
 DEPENDENCIES:
   - Capacitor
-  - Capacitor (= 1.0.0-beta.13)
-  - TwilioVideo (~> 2.6)
+  - TwilioVideo (~> 3.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Capacitor
     - CapacitorCordova
     - TwilioVideo
 
 SPEC CHECKSUMS:
-  Capacitor: 66a2bdd741e014edf461202c5f7899d4fcc9c185
-  CapacitorCordova: 787c1b04319cbcba4b60c24902b1d9068eacf276
-  TwilioVideo: a3b58b5a7c5a3271b18c8a481a4f0aa51f79b2c4
+  Capacitor: 77b85236006d70fa9c952384c29a29214f4e5544
+  CapacitorCordova: 2271de4d678eb616c5f70fe6b4d53e17e88ae171
+  TwilioVideo: 6927cd0ca69fe5d2f3c79522f0fea1d8b4a187ca
 
-PODFILE CHECKSUM: 18eb6d7c46ec30487274fc971b60ff3257b444ec
+PODFILE CHECKSUM: 0d318b2cf754952865ddb7fc6787c92f9d9c5575
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3
