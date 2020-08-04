@@ -204,7 +204,7 @@ class TwilioVideoViewController: UIViewController {
                 self.previewView.addGestureRecognizer(tap)
             }
             
-            camera!.startCapture(with: frontCamera != nil ? frontCamera! : backCamera!) { (captureDevice, videoFormat, error) in
+            camera!.startCapture(device: frontCamera != nil ? frontCamera! : backCamera!) { (captureDevice, videoFormat, error) in
                 if let error = error {
                     self.logMessage(messageText: "Capture failed with error.\ncode = \((error as NSError).code) error = \(error.localizedDescription)")
                 } else {
@@ -231,7 +231,6 @@ class TwilioVideoViewController: UIViewController {
 
     func logMessage(messageText: String) {
         NSLog(messageText)
-        messageLabel.text = messageText
     }
 }
 
