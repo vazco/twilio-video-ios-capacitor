@@ -1,29 +1,31 @@
-# twilio-ios-capacitor
+# twilio-video-ios-capacitor
 
-[![npm](https://img.shields.io/npm/v/twilio-ios-capacitor.svg)](https://www.npmjs.com/package/twilio-ios-capacitor)
-[![npm](https://img.shields.io/npm/dt/twilio-ios-capacitor.svg?label=npm%20downloads)](https://www.npmjs.com/package/twilio-ios-capacitor)
 
-This plugin is used to make video calls using Twilio video platform (https://github.com/twilio/) on iOS using Capacitor. Since the current implementation of Ionic/PWA apps on iOS run on top of WKWebView, and as of today (24/01/2019), Apple does not support WebRTC on WKWebView, the only way to work with Twilio Video on this platform is to build it natively.
+Capacitor plugin for make video calls using [Twilio Video](https://www.twilio.com/video) platform on iOS.  
 
-## Notice
-This plugin is currently under active development.
+Since the current implementation of Ionic/PWA apps on iOS run on top of WKWebView and Apple does not support WebRTC on WKWebView, the only way to work with Twilio Video on this platform is to build it natively.
+
+> This plugin is currently under development.  
+> Forked from [twilio-ios-capacitor](https://github.com/MCanhisares/twilio-ios-capacitor).
 
 ## Installation
-* `npm i twilio-ios-capacitor`
+
+* `npm i agodin3z/twilio-video-ios-capacitor`
 
 ## Usage
-This plugin uses version 2.6 of the TwilioVideo iOS Library
+
+This plugin uses version 3.6 of the Twilio Video iOS Library and uses version 2.1.1 of Capacitor
 
 ```ts
-import 'twilio-ios-capacitor';
-import { Storage, Plugins } from '@capacitor/core';
+import { TwilioVideoIos } from 'twilio-video-ios-capacitor';
+import { Plugins } from '@capacitor/core';
+const { TwilioVideoIos } = Plugins
 
-Plugins.TwilioIosCapacitor.joinTwilioRoom({ roomName: roomName, accessToken: accessToken})
+TwilioVideoIos.joinRoom({ roomName: roomName, accessToken: accessToken})
 ```
 
 ## Api
 
-
 | Method                                               | Default | Type                      | Description                 |
 | ---------------------------------------------------- | ------- | ------------------------- | --------------------------- |
-| joinTwilioRoom(options: { roomName: string, accessToken: string }) |         | `Promise<void>` | Used to join a room with the provided accessToken |
+| joinRoom(options: { roomName: string, accessToken: string }) |         | `Promise<void>` | Used to join a room with the provided accessToken |
