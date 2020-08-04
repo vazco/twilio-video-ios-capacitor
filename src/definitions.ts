@@ -1,9 +1,9 @@
 declare global {
   interface PluginRegistry {
-    TwilioIosCapacitor?: TwilioIosCapacitorPlugin;
+    TwilioVideoIos?: TwilioVideoIos;
   }
 }
 
-export interface TwilioIosCapacitorPlugin {
-  joinTwilioRoom(options: {roomName: String, accessToken: String}): Promise<any>;  
+export interface TwilioVideoIos {
+  joinRoom(options: {roomName: String, accessToken: String}): Promise<any>;  
 }
