@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
     ]
   }
   s.ios.deployment_target = '11.0'
-  s.dependency 'Capacitor', '~> 2.1.1'
+  s.dependency 'Capacitor'
   s.dependency 'TwilioVideo', '~> 3.6'
 end
