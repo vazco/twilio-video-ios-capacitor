@@ -1,5 +1,7 @@
 # twilio-video-ios-capacitor
 
+[![npm](https://img.shields.io/npm/v/twilio-video-ios-capacitor.svg)](https://www.npmjs.com/package/twilio-video-ios-capacitor)
+[![npm](https://img.shields.io/npm/dt/twilio-video-ios-capacitor.svg?label=npm%20downloads)](https://www.npmjs.com/package/twilio-video-ios-capacitor)
 
 Capacitor plugin for make video calls using [Twilio Video](https://www.twilio.com/video) platform on iOS.  
 
