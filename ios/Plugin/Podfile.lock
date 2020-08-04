@@ -6,7 +6,7 @@ PODS:
 
 DEPENDENCIES:
   - Capacitor
-  - TwilioVideo (~> 3.0)
+  - TwilioVideo (~> 3.6)
 
 SPEC REPOS:
   trunk:
@@ -19,6 +19,6 @@ SPEC CHECKSUMS:
   CapacitorCordova: 2271de4d678eb616c5f70fe6b4d53e17e88ae171
   TwilioVideo: 6927cd0ca69fe5d2f3c79522f0fea1d8b4a187ca
 
-PODFILE CHECKSUM: 0d318b2cf754952865ddb7fc6787c92f9d9c5575
+PODFILE CHECKSUM: d3bb9a4e65845b902cfd7c55b577f1766b050256
 
 COCOAPODS: 1.9.3
