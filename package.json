@@ -29,7 +29,7 @@
   "files": [
     "dist/",
     "ios/",
-    "twilio_video_ios_capacitor.podspec"
+    "TwilioVideoIosCapacitor.podspec"
   ],
   "keywords": [
     "capacitor",
