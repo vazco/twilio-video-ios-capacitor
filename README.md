@@ -12,7 +12,13 @@ Since the current implementation of Ionic/PWA apps on iOS run on top of WKWebVie
 
 ## Installation
 
-* `npm i agodin3z/twilio-video-ios-capacitor`
+### NPM
+
+* `npm i twilio-video-ios-capacitor`
+
+### Yarn
+
+* `yarn add twilio-video-ios-capacitor`
 
 ## Usage
 
@@ -23,7 +29,11 @@ import { TwilioVideoIos } from 'twilio-video-ios-capacitor';
 import { Plugins } from '@capacitor/core';
 const { TwilioVideoIos } = Plugins
 
+. . .
+
 TwilioVideoIos.joinRoom({ roomName: roomName, accessToken: accessToken})
+
+. . .
 ```
 
 ## Api
