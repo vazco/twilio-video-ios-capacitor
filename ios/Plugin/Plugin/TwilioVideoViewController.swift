@@ -32,14 +32,16 @@ class TwilioVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "QuickStart"
-        
         if Utils.isSimulator {
             self.previewView.removeFromSuperview()
         } else {
             // Preview our local camera track in the local video preview view.
             self.startPreview()
-        }                
+        }
+        
+        self.disconnectButton.isHidden = true
+        self.cameraButton.isHidden = true
+        self.micButton.isHidden = true
         
         self.connect()
     }
@@ -47,7 +49,7 @@ class TwilioVideoViewController: UIViewController {
     @IBAction func disconnect(sender: Any) {
         self.room!.disconnect()
         self.dismiss(animated: true, completion: nil)
-        print("Attempting to disconnect from room \(room!.name)")
+        self.logMessage(messageText: "Attempting to disconnect from room \(room!.name)")
     }
     
     @IBAction func toggleMic(sender: Any) {
@@ -164,13 +166,13 @@ class TwilioVideoViewController: UIViewController {
         // Connect to the Room using the options we provided.
         room = TwilioVideoSDK.connect(options: connectOptions, delegate: self)
         
-        print("Attempting to connect to room \(String(describing: self.roomName))")
-        
+        logMessage(messageText: "Attempting to connect to room \(String(describing: self.roomName))")
         self.showRoomUI(inRoom: true)
     }
     
     func showRoomUI(inRoom: Bool) {
         self.micButton.isHidden = !inRoom
+        self.cameraButton.isHidden = !inRoom
         self.disconnectButton.isHidden = !inRoom
         self.navigationController?.setNavigationBarHidden(inRoom, animated: true)
         UIApplication.shared.isIdleTimerDisabled = inRoom
