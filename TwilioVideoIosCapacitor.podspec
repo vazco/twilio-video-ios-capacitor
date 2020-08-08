@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
       'ios/Plugin/Plugin/*.xib'
     ]
   }
+  s.resources = 'ios/Plugin/Plugin/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
   s.ios.deployment_target = '11.0'
   s.dependency 'Capacitor'
   s.dependency 'TwilioVideo', '~> 3.6'
