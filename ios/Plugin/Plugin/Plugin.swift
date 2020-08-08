@@ -24,12 +24,12 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
         
         let bundleURL = podBundle.url(forResource: "Plugin", withExtension: "bundle")!
         let bundle = Bundle(url: bundleURL)!
-        
-        let viewController = TwilioVideoViewController(nibName: "TwilioVideoViewController", bundle: bundle)
-        viewController.roomName = roomName
-        viewController.accessToken = accessToken
-        
+
         DispatchQueue.main.sync {
+            let viewController = TwilioVideoViewController(nibName: "TwilioVideoViewController", bundle: bundle)
+            viewController.roomName = roomName
+            viewController.accessToken = accessToken
+
             self.bridge.viewController.present(viewController, animated: true, completion: nil)
         }
         
