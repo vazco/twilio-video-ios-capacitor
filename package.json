@@ -1,7 +1,7 @@
 {
   "name": "twilio-video-ios-capacitor",
   "description": "This plugin is used to make video calls using Twilio video platform on iOS",
-  "version": "0.1.2",
+  "version": "0.2.4",
   "author": "agodin3z <agodiin3z@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/agodin3z/twilio-video-ios-capacitor#readme",
