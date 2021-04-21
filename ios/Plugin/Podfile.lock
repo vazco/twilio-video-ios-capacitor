@@ -1,0 +1,24 @@
+PODS:
+  - Capacitor (2.1.1):
+    - CapacitorCordova (= 2.1.1)
+  - CapacitorCordova (2.1.1)
+  - TwilioVideo (3.6.0)
+
+DEPENDENCIES:
+  - Capacitor
+  - TwilioVideo (~> 3.6)
+
+SPEC REPOS:
+  trunk:
+    - Capacitor
+    - CapacitorCordova
+    - TwilioVideo
+
+SPEC CHECKSUMS:
+  Capacitor: 77b85236006d70fa9c952384c29a29214f4e5544
+  CapacitorCordova: 2271de4d678eb616c5f70fe6b4d53e17e88ae171
+  TwilioVideo: 6927cd0ca69fe5d2f3c79522f0fea1d8b4a187ca
+
+PODFILE CHECKSUM: d3bb9a4e65845b902cfd7c55b577f1766b050256
+
+COCOAPODS: 1.9.3

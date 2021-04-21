@@ -1,0 +1,45 @@
+{
+  "name": "twilio-video-ios-capacitor",
+  "description": "This plugin is used to make video calls using Twilio video platform on iOS",
+  "version": "0.2.4",
+  "author": "agodin3z <agodiin3z@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/agodin3z/twilio-video-ios-capacitor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agodin3z/twilio-video-ios-capacitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agodin3z/twilio-video-ios-capacitor/issues"
+  },
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@capacitor/core": "^2.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "TwilioVideoIosCapacitor.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native",
+    "ios"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwilioVideoViewController" customModule="TwilioVideoIosCapacitor" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraButton" destination="r6y-MV-XZh" id="gZs-xd-h6W"/>
+                <outlet property="disconnectButton" destination="6jz-1X-hWr" id="E3Q-9B-lx9"/>
+                <outlet property="micButton" destination="5sv-Sn-TKX" id="eag-cH-Lox"/>
+                <outlet property="previewView" destination="rwf-Ud-cMM" id="AiV-Zw-yzo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sv-Sn-TKX">
+                    <rect key="frame" x="244" y="694" width="62" height="119"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="XoM-9c-mem"/>
+                        <constraint firstAttribute="height" constant="50" id="lEu-UP-qN6"/>
+                    </constraints>
+                    <state key="normal" image="mute"/>
+                    <state key="selected" image="muteActivated"/>
+                    <connections>
+                        <action selector="toggleMicWithSender:" destination="-1" eventType="touchUpInside" id="d4W-LL-tyj"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-Ud-cMM" customClass="TVIVideoView">
+                    <rect key="frame" x="0.0" y="630" width="124" height="182"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Ijg-bd-bph"/>
+                        <constraint firstAttribute="width" constant="120" id="z7r-vX-NMx"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jz-1X-hWr">
+                    <rect key="frame" x="162" y="728" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1pX-DO-0Fh"/>
+                        <constraint firstAttribute="width" constant="50" id="ZFa-BT-I83"/>
+                    </constraints>
+                    <state key="normal" image="disconnect"/>
+                    <connections>
+                        <action selector="disconnectWithSender:" destination="-1" eventType="touchUpInside" id="TlW-k8-50s"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-MV-XZh">
+                    <rect key="frame" x="268" y="728" width="167" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="ZiS-v1-UNB"/>
+                        <constraint firstAttribute="height" constant="50" id="rAU-Sd-hgq"/>
+                    </constraints>
+                    <state key="normal" image="stopVideo"/>
+                    <state key="selected" image="stopVideoActivated"/>
+                    <connections>
+                        <action selector="toggleCameraWithSender:" destination="-1" eventType="touchUpInside" id="0Ve-B6-BfK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6jz-1X-hWr" secondAttribute="bottom" constant="20" id="1HL-0H-K3e"/>
+                <constraint firstItem="6jz-1X-hWr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="146" id="3tp-oj-EgV"/>
+                <constraint firstItem="5sv-Sn-TKX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="146" id="4tp-oj-EgV"/>
+                <constraint firstItem="r6y-MV-XZh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="146" id="5tp-oj-EgV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rwf-Ud-cMM" secondAttribute="bottom" constant="20" id="91D-lt-CMC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rwf-Ud-cMM" secondAttribute="trailing" constant="239" id="LXg-Jc-3iW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5sv-Sn-TKX" secondAttribute="bottom" constant="86" id="aqM-er-KVc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r6y-MV-XZh" secondAttribute="bottom" constant="152" id="m1d-aJ-eLC"/>
+            </constraints>
+            <point key="canvasLocation" x="36.92307692307692" y="44.7867298578199"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="disconnect" width="50" height="50"/>
+        <image name="mute" width="50" height="50"/>
+        <image name="muteActivated" width="50" height="50"/>
+        <image name="stopVideo" width="50" height="50"/>
+        <image name="stopVideoActivated" width="50" height="50"/>
+    </resources>
+</document>
