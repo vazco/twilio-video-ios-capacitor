@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -19,11 +19,30 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-Ud-cMM" customClass="TVIVideoView">
+                    <rect key="frame" x="20" y="1020" width="250" height="326"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Ijg-bd-bph"/>
+                        <constraint firstAttribute="width" constant="120" id="z7r-vX-NMx"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jz-1X-hWr">
+                    <rect key="frame" x="414" y="1194" width="142" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="1pX-DO-0Fh"/>
+                        <constraint firstAttribute="width" constant="50" id="ZFa-BT-I83"/>
+                    </constraints>
+                    <state key="normal" image="disconnect"/>
+                    <connections>
+                        <action selector="disconnectWithSender:" destination="-1" eventType="touchUpInside" id="TlW-k8-50s"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sv-Sn-TKX">
-                    <rect key="frame" x="244" y="694" width="62" height="119"/>
+                    <rect key="frame" x="764" y="1175" width="62" height="119"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="XoM-9c-mem"/>
                         <constraint firstAttribute="height" constant="50" id="lEu-UP-qN6"/>
@@ -34,27 +53,8 @@
                         <action selector="toggleMicWithSender:" destination="-1" eventType="touchUpInside" id="d4W-LL-tyj"/>
                     </connections>
                 </button>
-                <view contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-Ud-cMM" customClass="TVIVideoView">
-                    <rect key="frame" x="0.0" y="630" width="124" height="182"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="160" id="Ijg-bd-bph"/>
-                        <constraint firstAttribute="width" constant="120" id="z7r-vX-NMx"/>
-                    </constraints>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jz-1X-hWr">
-                    <rect key="frame" x="162" y="728" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="1pX-DO-0Fh"/>
-                        <constraint firstAttribute="width" constant="50" id="ZFa-BT-I83"/>
-                    </constraints>
-                    <state key="normal" image="disconnect"/>
-                    <connections>
-                        <action selector="disconnectWithSender:" destination="-1" eventType="touchUpInside" id="TlW-k8-50s"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-MV-XZh">
-                    <rect key="frame" x="268" y="728" width="167" height="50"/>
+                    <rect key="frame" x="788" y="1209" width="167" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="ZiS-v1-UNB"/>
                         <constraint firstAttribute="height" constant="50" id="rAU-Sd-hgq"/>
@@ -78,7 +78,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5sv-Sn-TKX" secondAttribute="bottom" constant="86" id="aqM-er-KVc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r6y-MV-XZh" secondAttribute="bottom" constant="152" id="m1d-aJ-eLC"/>
             </constraints>
-            <point key="canvasLocation" x="36.92307692307692" y="44.7867298578199"/>
+            <point key="canvasLocation" x="36.9140625" y="44.363103953147871"/>
         </view>
     </objects>
     <resources>

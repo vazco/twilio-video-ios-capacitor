@@ -20,6 +20,7 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
             call.reject("Must provide an accessToken")
             return
         }
+        
         let podBundle = Bundle(for: TwilioVideoViewController.self)
         
         let bundleURL = podBundle.url(forResource: "TwilioVideoIosCapacitor", withExtension: "bundle")!
@@ -29,8 +30,6 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
             let viewController = TwilioVideoViewController(nibName: "TwilioVideoViewController", bundle: bundle)
             viewController.roomName = roomName
             viewController.accessToken = accessToken
-//            viewController.bridge = self.bridge
-
             self.bridge.viewController.present(viewController, animated: true, completion: nil)
         
         }
@@ -39,11 +38,15 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
     }
     
     @objc public func triggerWindowJSEvent(eventName: String) {
-        self.bridge.triggerJSEvent(eventName: eventName, target: "window")
+        DispatchQueue.main.sync {
+            self.bridge.triggerJSEvent(eventName: eventName, target: "window")
+        }
     }
 
     @objc public func triggerWindowJSEvent(eventName: String, data: String) {
-        self.bridge.triggerJSEvent(eventName: eventName, target: "window", data: data)
+        DispatchQueue.main.sync {
+            self.bridge.triggerJSEvent(eventName: eventName, target: "window", data: data)
+        }
     }
 
 }

@@ -11,6 +11,7 @@ import UIKit
 import TwilioVideo
 import WebKit
 import AVFoundation
+import Capacitor
 
 
 class TwilioVideoViewController: UIViewController {
@@ -29,7 +30,7 @@ class TwilioVideoViewController: UIViewController {
     
     var accessToken: String = ""
     var roomName: String = ""
-    //var bridge: CAPBridge
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -257,6 +258,7 @@ extension TwilioVideoViewController : RoomDelegate {
         self.room = nil
         
         self.showRoomUI(inRoom: false)
+        
     }
     
     func roomDidFailToConnect(room: Room, error: Error) {
