@@ -49,6 +49,12 @@ class TwilioVideoViewController: UIViewController {
         self.connect()
     }
     
+    func disconnect() {
+        self.room!.disconnect()
+        self.dismiss(animated: true, completion: nil)
+        self.logMessage(messageText: "Attempting to disconnect from room \(room!.name)")
+    }
+    
     @IBAction func disconnect(sender: Any) {
         self.room!.disconnect()
         self.dismiss(animated: true, completion: nil)

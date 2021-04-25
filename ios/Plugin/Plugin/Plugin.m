@@ -6,4 +6,5 @@
 
 CAP_PLUGIN(TwilioVideoIosCapacitor, "TwilioVideoIos",
           CAP_PLUGIN_METHOD(joinRoom, CAPPluginReturnPromise);
+          CAP_PLUGIN_METHOD(disconnect, CAPPluginReturnPromise);
 )

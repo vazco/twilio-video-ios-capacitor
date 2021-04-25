@@ -9,6 +9,8 @@ import Photos
 @objc(TwilioVideoIosCapacitor)
 public class TwilioVideoIosCapacitor: CAPPlugin {
     
+    open var viewCont: UIViewController?;
+    
     @objc func joinRoom(_ call: CAPPluginCall) {
         
         guard let roomName = call.options["roomName"] as? String else {
@@ -37,16 +39,12 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
         call.resolve()
     }
     
-    @objc public func triggerWindowJSEvent(eventName: String) {
+    @objc public func disconnect(_ call: CAPPluginCall) {
         DispatchQueue.main.sync {
-            self.bridge.triggerJSEvent(eventName: eventName, target: "window")
+            self.bridge.viewController.dismiss(animated: true, completion: nil);
         }
+        call.resolve()
     }
 
-    @objc public func triggerWindowJSEvent(eventName: String, data: String) {
-        DispatchQueue.main.sync {
-            self.bridge.triggerJSEvent(eventName: eventName, target: "window", data: data)
-        }
-    }
 
 }

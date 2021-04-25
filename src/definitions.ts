@@ -5,5 +5,6 @@ declare global {
 }
 
 export interface TwilioVideoIos {
-  joinRoom(options: {roomName: String, accessToken: String}): Promise<any>;  
+  joinRoom(options: {roomName: String, accessToken: String}): Promise<any>;
+  disconnect(): Promise<any>;
 }
