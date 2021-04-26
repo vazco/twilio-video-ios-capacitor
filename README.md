@@ -30,15 +30,15 @@ import { Plugins } from '@capacitor/core';
 const { TwilioVideoIos } = Plugins
 
 . . .
-for connecting
+// to connect
 await TwilioVideoIos.joinRoom({ roomName: roomName, accessToken: accessToken})
-closing connection:
+// to close connection:
 await TwilioVideoIos.disconnect()
 
 
-// getting disconnect event was clicked on Native side
+// to get a disconnect event was clicked on the native side
 window.addEventListener('TwilioVideoIosCapacitor:disconnect', () => {
-  _bookingId && history.push(`/call-review/${_bookingId}`);
+  history.back();
 });
 . . .
 ```
