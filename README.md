@@ -22,10 +22,9 @@ Since the current implementation of Ionic/PWA apps on iOS run on top of WKWebVie
 
 ## Usage
 
-This plugin uses version 3.6 of the Twilio Video iOS Library and uses version 2.1.1 of Capacitor
+This plugin uses the Twilio Video iOS Library and uses version 2.4 of Capacitor
 
 ```ts
-import { TwilioVideoIos } from 'twilio-video-ios-capacitor';
 import { Plugins } from '@capacitor/core';
 const { TwilioVideoIos } = Plugins
 
