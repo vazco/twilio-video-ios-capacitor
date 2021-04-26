@@ -32,6 +32,7 @@ public class TwilioVideoIosCapacitor: CAPPlugin {
             let viewController = TwilioVideoViewController(nibName: "TwilioVideoViewController", bundle: bundle)
             viewController.roomName = roomName
             viewController.accessToken = accessToken
+            viewController.bridge = self.bridge
             self.bridge.viewController.present(viewController, animated: true, completion: nil)
         
         }
