@@ -60,7 +60,7 @@ class TwilioVideoViewController: UIViewController {
         self.room!.disconnect()
         self.dismiss(animated: true, completion: nil)
         self.logMessage(messageText: "Attempting to disconnect from room \(room!.name)")
-        self.bridge?.triggerWindowJSEvent(eventName: "TwilioVideoIosCapacitor:disconnect", data: roomName)
+        self.bridge?.triggerWindowJSEvent(eventName: "TwilioVideoIosCapacitor:disconnect")
     }
     
     @IBAction func toggleMic(sender: Any) {
