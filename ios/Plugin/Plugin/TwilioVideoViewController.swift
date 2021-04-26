@@ -30,6 +30,7 @@ class TwilioVideoViewController: UIViewController {
     
     var accessToken: String = ""
     var roomName: String = ""
+    var bridge: CAPBridge?
     
 
     override func viewDidLoad() {
@@ -59,6 +60,7 @@ class TwilioVideoViewController: UIViewController {
         self.room!.disconnect()
         self.dismiss(animated: true, completion: nil)
         self.logMessage(messageText: "Attempting to disconnect from room \(room!.name)")
+        self.bridge?.triggerWindowJSEvent(eventName: "TwilioVideoIosCapacitor:disconnect", data: roomName)
     }
     
     @IBAction func toggleMic(sender: Any) {
